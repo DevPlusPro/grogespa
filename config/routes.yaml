@@ -6,3 +6,62 @@
 # index:
 #    path: /
 #    controller: App\Controller\Site\HomeController::index
+# config/routes.yaml
+index:
+    path:         /index
+    controller: App\Controller\Site\HomeController::index
+    defaults:
+        template: site/index.html.twig
+    methods: GET
+
+about_us:
+    path:         /about_us
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/about_us.html.twig
+    methods: GET
+
+services:
+    path:         /services
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/services.html.twig
+    methods: GET
+
+
+portfolio:
+    path:         /portfolio
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/portfolio.html.twig
+    methods: GET
+
+
+features:
+    path:         /features
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/features.html.twig
+    methods: GET
+
+
+testimonials:
+    path:         /testimonials
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/testimonials.html.twig
+    methods: GET
+
+pricing:
+    path:         /pricing
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/pricing.html.twig
+    methods: GET
+
+contact:
+    path:         /contact
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/contact.html.twig
+    methods: GET
