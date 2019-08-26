@@ -44,6 +44,13 @@ features:
         template: site/features.html.twig
     methods: GET
 
+connection:
+    path:         /connection
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: site/connection.html.twig
+    methods: GET
+
 
 testimonials:
     path:         /testimonials
