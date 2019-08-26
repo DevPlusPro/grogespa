@@ -1,0 +1,131 @@
+{% extends 'site/base.html.twig' %}
+
+{% block stylesheet %} {{parent()}} {% endblock %}
+
+{% block title %}Accueil - Site de Grogespa {% endblock %}
+   
+{% block header %} {{parent()}} {% endblock %}
+        
+{% block body %}
+ <div class="slider-area">
+        <div class="slider-wrapper owl-carousel">
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 class="homepage-three-title">Lotissement <span>Achats et ventes </span> de terrains et maisons</h1>
+                                <h2>With Grogespa Solutions responsive landing page template, <br>you can promote your all web design & development services. </h2>
+                                <div class="slider-content-btn">
+                                    <a class="button btn btn-light btn-radius btn-brd" href="#">Plus d'infos</a>
+                                    <a class="button btn btn-light btn-radius btn-brd" href="#">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item text-center home-one-slider-otem slider-item-four slider-bg-two">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 class="homepage-three-title">Construction, <span>ouverture</span> de voie</h1>
+                                <h2>With Grogespa Solutions responsive landing page template, <br>you can promote your all web design & development services. </h2>
+                                <div class="slider-content-btn">
+                                    <a class="button btn btn-light btn-radius btn-brd" href="#">Plus d'infos</a>
+                                    <a class="button btn btn-light btn-radius btn-brd" href="#">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item home-one-slider-otem slider-item-four slider-bg-three">
+                <div class="container">
+                    <div class="row">
+                        <div class="slider-content-area">
+                            <div class="slide-text">
+                                <h1 class="homepage-three-title">Fourniture de materiaux de <span>construction </span> et divers</h1>
+                                <h2>With Grogespa Solutions responsive landing page template, <br>you can promote your all web design & development services.</h2>
+                                <div class="slider-content-btn">
+                                    <a class="button btn btn-light btn-radius btn-brd" href="#">Plus d'infos</a>
+                                    <a class="button btn btn-light btn-radius btn-brd" href="#">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% include 'site/about-us-section.html.twig' %}
+    
+    <div class="parallax section parallax-off" data-stellar-background-ratio="0.9" style="background-image:url({{ asset('uploads/parallax_04.jpg')}});">
+        <div class="container">
+            <div class="row text-center stat-wrap">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-briefcase"></i></span>
+                    <p class="stat_count">1200</p>
+                    <h3>Projets menés a terme</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-happy"></i></span>
+                    <p class="stat_count">3210</p>
+                    <h3>Clients satisfaits</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-idea"></i></span>
+                    <p class="stat_count">3781</p>
+                    <h3>Services à la clientèle</h3>
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <span data-scroll class="global-radius icon_wrap effect-1"><i class="flaticon-customer-service"></i></span>
+                    <p class="stat_count">4300</p>
+                    <h3>Reponses aux questions</h3>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    {% include 'site/services-section.html.twig' %}
+    
+    <div class="parallax section noover" data-stellar-background-ratio="0.7" style="background-image:url({{ asset('uploads/parallax_05.png')}});">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <div class="customwidget text-left">
+                        <h1>Gestion de patrimoine</h1>
+                        <p>Full access control of the background parallax effects, <br>change your awesome background elements and edit colors from style.css or colors.css</p>
+                        <ul class="list-inline">
+                            <li><i class="fa fa-check"></i> Custom Sections</li>
+                            <li><i class="fa fa-check"></i> Parallax's</li>
+                            <li><i class="fa fa-check"></i> Icons & PSD</li>
+                            <li><i class="fa fa-check"></i> Limitless Colors</li>
+                        </ul><!-- end list -->
+                        <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd">Plus d'infos</a>
+                    </div>
+                </div><!-- end col -->
+                <div class="col-md-6">
+                    <div class="text-center image-center hidden-sm hidden-xs">
+                        <img src="{{ asset('uploads/device_03.png')}}" alt="" class="img-responsive wow fadeInUp">
+                    </div>
+                </div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+    
+{% include 'site/features-section.html.twig' %}
+
+{% include 'site/testimonials-section.html.twig' %}
+
+{% endblock %}
+
+{% block footer %}  {{parent()}} {% endblock %} 
+
+{% block javacript %} {{parent()}} {% endblock %}
+

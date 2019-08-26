@@ -1,0 +1,39 @@
+{% extends 'site/base.html.twig' %}
+
+{% block stylesheet %} {{parent()}} {% endblock %}
+
+{% block title %}CONNEXION - Site de Grogespa {% endblock %}
+   
+{% block header %} {{parent()}} {% endblock %}
+        
+{% block body %}
+    <div class="banner-area banner-bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner">
+                        <h2>CONNEXION</h2>
+                        <ul class="page-title-link">
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">CONNEXION</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+{% include 'site/features-section.html.twig' %}
+
+{% include 'site/testimonials-section.html.twig' %}
+    
+{% endblock %}
+
+{% block footer %}  {{parent()}} {% endblock %} 
+
+{% block javacript %} {{parent()}} {% endblock %}
+
+   
+
+    
