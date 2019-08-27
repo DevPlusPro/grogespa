@@ -23,7 +23,39 @@
         </div>
     </div>
 
+  <div id="contact" class="section wb"> 
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Authentification</h3>
+                <p class="lead">Veillez renseigner votre identifiant et votre mot de passe pour avoir accès à votre tableau de bord</p>
+            </div><!-- end title -->
 
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="loginform" class="row" action="connexion.php" name="loginform" method="post">
+                            <fieldset class="row-fluid">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="text" name="login" id="login" class="form-control" placeholder="Identifiant">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe">
+                                </div>
+                                                      
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Connexion</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+            
+{% include 'site/adress-section.html.twig' %}
+            
+        </div><!-- end container -->
+    </div><!-- end section -->
 {# include 'site/features-section.html.twig' #}
 
 {% include 'site/testimonials-section.html.twig' %}
