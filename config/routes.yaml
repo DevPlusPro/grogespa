@@ -28,21 +28,13 @@ services:
         template: site/services.html.twig
     methods: GET
 
-
-portfolio:
-    path:         /portfolio
+partners:
+    path:         /partners
     controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
     defaults:
-        template: site/portfolio.html.twig
+        template: site/partners.html.twig
     methods: GET
 
-
-features:
-    path:         /features
-    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
-    defaults:
-        template: site/features.html.twig
-    methods: GET
 
 connection:
     path:         /connection
@@ -71,4 +63,11 @@ contact:
     controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
     defaults:
         template: site/contact.html.twig
+    methods: GET
+
+dashboard:
+    path:         /crux
+    controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+    defaults:
+        template: admin/index.html.twig
     methods: GET

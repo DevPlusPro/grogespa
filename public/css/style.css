@@ -508,21 +508,21 @@ li.social-links a {
 -------------------------------------------------------------------*/
 
 .slider-bg-one {
-    background-image: url("uploads/slider_01.jpg");
+    background-image: url("../uploads/slider_01.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .slider-bg-two {
-    background-image: url("uploads/slider_02.jpg");
+    background-image: url("../uploads/slider_02.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .slider-bg-three {
-    background-image: url("uploads/slider_03.jpg");
+    background-image: url("../uploads/slider_03.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1973,6 +1973,7 @@ select.mobile-device {
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
     background-color: #f2f3f5;
     padding: 40px 30px;
+    margin-bottom: 50px
 }
 
 .contact_form .form-control {
@@ -2867,7 +2868,7 @@ select.mobile-device {
 
 
 .banner-bg-1{
-	background: url(uploads/inner-bg.jpg);
+	background: url(../uploads/inner-bg.jpg);
 	padding: 120px 0;	
 	background-clip: initial;
 	background-color: rgba(0, 0, 0, 0);
@@ -3302,7 +3303,7 @@ select.mobile-device {
 
 
 .pd-add{
-	padding: 70px 0px;
+	padding: 25px 0px 25px 0px;
 }
 .address-item{
 	float: left;
