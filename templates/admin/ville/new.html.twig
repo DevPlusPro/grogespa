@@ -1,0 +1,25 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheet %} {{parent()}} {% endblock %}
+
+{% block title %} Ajouter une ville {% endblock %}
+   
+{% block content %}
+ <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Default accordion</h4>
+{% include 'admin/ville/new/buttons.html.twig' %}
+                  
+{{ form(form) }}
+   </div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+
+{% block footer %}  {{parent()}} {% endblock %} 
+
+{% block javacript %} {{parent()}} {% endblock %}

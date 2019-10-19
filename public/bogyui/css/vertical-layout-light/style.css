@@ -27190,6 +27190,7 @@ div.tagsinput span.tag a {
   font-weight: 400;
   color: #9b9b9b;
   margin: 2.2rem 1.25rem 0 1.25rem;
+  border-bottom: 1px solid gray;
 }
 
 .sidebar .nav .sidebar-category:hover > .nav-link {
@@ -27485,8 +27486,8 @@ div.tagsinput span.tag a {
 
 .navbar .navbar-brand-wrapper .navbar-brand img {
   max-width: 100%;
-  height: 1.5rem;
-  width: 7.187rem;
+  height: 2.5rem;
+  width: 10.187rem;
   margin: auto;
   vertical-align: middle;
 }
@@ -27497,7 +27498,7 @@ div.tagsinput span.tag a {
 }
 
 .navbar .navbar-brand-wrapper .brand-logo-mini img {
-  width: calc(70px - 30px);
+  width: calc(85px - 30px);
   max-width: 100%;
   margin: auto;
   height: auto;

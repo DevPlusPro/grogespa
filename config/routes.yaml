@@ -40,7 +40,7 @@ connection:
     path:         /connection
     controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
     defaults:
-        template: site/connection.html.twig
+        template: security/login.html.twig
     methods: GET
 
 
@@ -69,5 +69,9 @@ dashboard:
     path:         /crux
     controller:   Symfony\Bundle\FrameworkBundle\Controller\TemplateController
     defaults:
-        template: admin/index.html.twig
+        template: admin/base.html.twig
     methods: GET
+
+controllers:
+    resource: '../src/Controller/'
+    type:     annotation

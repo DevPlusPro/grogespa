@@ -1,0 +1,89 @@
+{% extends 'site/base.html.twig' %}
+
+{% block stylesheet %} {{parent()}} {% endblock %}
+
+{% block title %}CONNEXION - Site de Grogespa {% endblock %}
+   
+{% block header %} {{parent()}} {% endblock %}
+        
+{% block body %}
+    <div class="banner-area banner-bg-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner">
+                        <h2>CONNEXION</h2>
+                        <ul class="page-title-link">
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">CONNEXION</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+  <div id="contact" class="section wb"> 
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Authentification</h3>
+                <p class="lead">Veillez renseigner votre identifiant et votre mot de passe pour avoir accès à votre tableau de bord</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="contact_form">
+                      <div id="message"></div>
+                        <form id="loginform" class="row" name="loginform" method="post">
+                        {% if error %}
+                            <div  class="alert alert-danger " role="alert" ">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                        {% endif %}
+
+                        {% if app.user %}
+                            <div class="mb-3 text-center" style="margin-bottom: 20px">
+                                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                            </div>
+                            {% endif %}
+
+                            <fieldset class="row-fluid">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" placeholder="Identifiant">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="password"  class="form-control form-control-lg border-left-0"  name="password" id="inputPassword"  class="form-control" placeholder="Mot de passe">
+                                </div>
+                                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >
+                                <div class="form-check text-right">
+                                    <label class="form-check-label text-muted">
+                                        <input type="checkbox" class="form-check-input" name="_remember_me"> Se souvenir de moi
+                                    </label>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Connexion</button>
+                                </div>
+              
+                            </fieldset>
+                            <div class="text-center mt-4 font-weight-light" style="margin-top: 20px">
+                              Vous n'avez pas de compte ? Vueillez contactez Grogespa.<a href="register-2.html" class="text-primary">
+                            </div>
+                          </form>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+            
+            
+        </div><!-- end container -->
+    </div><!-- end section -->
+{# include 'site/features-section.html.twig' #}
+
+{% include 'site/testimonials-section.html.twig' %}
+    
+{% endblock %}
+
+{% block footer %}  {{parent()}} {% endblock %} 
+
+{% block javacript %} {{parent()}} {% endblock %}
+
+   
+
+    
