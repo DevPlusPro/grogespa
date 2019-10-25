@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="{{ asset('bogyui/css/vertical-layout-light/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('bogyui/images/favicon.png')}}" />
+
+  <!-- --- datatables ----- -->
+  <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css')}} ">
   {% endblock %}
 </head>
 
@@ -246,6 +250,7 @@
                 <li class="nav-item"> <a class="nav-link" href="{{path('site.new')}}">Nouveau</a></li>
                    <li class="nav-item"> <a class="nav-link" href="{{path('terrain.list')}}">Terrains</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{path('ville.list')}}">Ville</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{path('quartier.list')}}">Quartier</a></li>
 
               </ul>
             </div>
@@ -328,6 +333,11 @@
   <!-- Custom js for this page-->
   <script src="{{ asset('bogyui/js/dashboard.js')}}"></script>
   <!-- End custom js for this page-->
+
+   <!-- ----- datatables ---- -->
+  <script  src="{{ asset('js/jquery-3.3.1.js')}}" ></script>
+  <script src="{{ asset('js/jquery.dataTables.min.js')}}"></script> 
+  <script src="{{ asset('js/dataTables.bootstrap4.min.js')}}"></script>
         {% endblock %}
     </body>
 

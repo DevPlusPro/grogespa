@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\VersementType;
 use App\Entity\Versement;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,7 +17,12 @@ class VersementController extends AbstractController
      */
     public function new()
     {
-        return $this->render('admin/versement/new.html.twig');
+        $versement = new Versement();
+
+        $form = $this->createForm(VersementType::class, $versement);
+        return $this->render('admin/versement/new.html.twig' ,[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
@@ -25,6 +30,6 @@ class VersementController extends AbstractController
      */
     public function list()
     {
-       return $this->render('admin/versement/new.html.twig');
+       return $this->render('admin/versement/list.html.twig');
     }
 }

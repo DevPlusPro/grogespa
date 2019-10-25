@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\GroupeType;
 use App\Entity\Groupe;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -18,7 +18,12 @@ class GroupeController extends AbstractController
     public function new()
     {
         // creates a groupe object and initializes some data for this example
-       return $this->render('admin/groupe/new.html.twig');
+        $groupe = new Groupe();
+
+        $form = $this->createForm(GroupeType::class, $groupe);
+       return $this->render('admin/groupe/new.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
@@ -26,6 +31,6 @@ class GroupeController extends AbstractController
      */
     public function list()
     {
-        return $this->render('admin/groupe/new.html.twig');
+        return $this->render('admin/groupe/list.html.twig');
     }
 }

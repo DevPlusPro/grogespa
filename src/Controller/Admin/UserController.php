@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\UserType;
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,7 +17,12 @@ class UserController extends AbstractController
      */
     public function new()
     {
-        return $this->render('admin/user/new.html.twig');
+        $user = new User();
+
+        $form = $this->createForm(UserType::class, $user);
+        return $this->render('admin/user/new.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
@@ -25,6 +30,6 @@ class UserController extends AbstractController
      */
     public function list()
     {
-       return $this->render('admin/user/new.html.twig');
+       return $this->render('admin/user/list.html.twig');
     }
 }

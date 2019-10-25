@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\AgenceImmobiliereType;
 use App\Entity\AgenceImmobiliere;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -19,8 +19,15 @@ class AgenceImmobiliereController extends AbstractController
     public function new()
     {
         
+        // creates a agence object and initializes some data for this example
+        $agence = new AgenceImmobiliere();
+        // $agence->setTitle('Abidjan');
 
-        return $this->render('admin/agence_immobiliere/new.html.twig');
+        $form = $this->createForm(AgenceImmobiliereType::class, $agence);
+
+        return $this->render('admin/agence_immobiliere/new.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**

@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\TerrainType;
 use App\Entity\Terrain;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,7 +17,12 @@ class TerrainController extends AbstractController
      */
     public function new()
     {
-        return $this->render('admin/terrain/new.html.twig');
+        $terrain = new Terrain();
+
+        $form = $this->createForm(TerrainType::class, $terrain);
+        return $this->render('admin/terrain/new.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
@@ -25,6 +30,6 @@ class TerrainController extends AbstractController
      */
     public function list()
     {
-        return $this->render('admin/terrain/new.html.twig');
+        return $this->render('admin/terrain/list.html.twig');
     }
 }

@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\ModePayementType;
 use App\Entity\ModePayement;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,7 +17,11 @@ class ModePayementController extends AbstractController
      */
     public function new()
     {
-       return $this->render('admin/mode_payement/new.html.twig');
+         $mode_payement = new ModePayement();
+        $form = $this->createForm(ModePayementType::class, $mode_payement);
+       return $this->render('admin/mode_payement/new.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**

@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\QuartierType;
 use App\Entity\Quartier;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,7 +17,12 @@ class QuartierController extends AbstractController
      */
     public function new()
     {
-       return $this->render('admin/quartier/new.html.twig');
+        $quartier = new Quartier();
+
+        $form = $this->createForm(QuartierType::class, $quartier);
+       return $this->render('admin/quartier/new.html.twig',[
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
@@ -25,6 +30,6 @@ class QuartierController extends AbstractController
      */
     public function list()
     {
-        return $this->render('admin/quartier/new.html.twig');
+        return $this->render('admin/quartier/list.html.twig');
     }
 }

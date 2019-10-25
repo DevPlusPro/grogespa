@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller\Admin;
 
-use App\Form\Type\VilleType;
+use App\Form\Type\SiteType;
 use App\Entity\Site;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -17,6 +17,13 @@ class SiteController extends AbstractController
      */
     public function new()
     {
+        // creates a groupe object and initializes some data for this example
+        $site = new Site();
+
+        $form = $this->createForm(SiteType::class, $site);
+       return $this->render('admin/groupe/new.html.twig',[
+            'form' => $form->createView(),
+        ]);
        return $this->render('admin/site/new.html.twig');
     }
     /**
@@ -24,6 +31,6 @@ class SiteController extends AbstractController
      */
     public function list()
     {
-       return $this->render('admin/site/new.html.twig');
+       return $this->render('admin/site/list.html.twig');
     }
 }

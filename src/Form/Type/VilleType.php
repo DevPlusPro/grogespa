@@ -15,7 +15,7 @@ class VilleType extends AbstractType
     {
         $builder
             ->add('title', TextType::class)
-            ->add('save', SubmitType::class)
+            ->add('Enregistrer', SubmitType::class)
         ;
     }
 
